@@ -1,6 +1,8 @@
 import django_heroku
 import os
 
+django_heroku.settings(locals())
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'please-set-secret-key-through-env')
